@@ -2,9 +2,6 @@
 
 ## Build
 
-git clone https://github.com/peterfuture/dtcodec<br>
-git submodule update --init
-
 ###Linux
 
 * ./autogen.sh
