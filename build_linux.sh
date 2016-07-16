@@ -26,11 +26,11 @@ CROSS_PREFIX=
 ./configure  --prefix=$PREFIX \
   --host=arm-linux \
   --with-sysroot=${SYSROOT} \
-  --disable-shared \
+  --enable-shared \
   --enable-static \
   --with-pic=no \
-  CC="${CROSS_PREFIX}gcc --sysroot=${SYSROOT}" \
-  CXX="${CROSS_PREFIX}g++ --sysroot=${SYSROOT}" \
+  CC="${CROSS_PREFIX}gcc -fPIC --sysroot=${SYSROOT}" \
+  CXX="${CROSS_PREFIX}g++ -fPIC --sysroot=${SYSROOT}" \
   RANLIB="${CROSS_PREFIX}ranlib" \
   AR="${CROSS_PREFIX}ar" \
   AR_FLAGS=rcu \
